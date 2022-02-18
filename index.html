@@ -1,0 +1,173 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary manager</title>
+<!-- twiland css cdn -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- custom css -->
+<link rel="stylesheet"  href="./assets/css/style.css">
+</head>
+<body>
+<!-- header start -->
+        <!-- <header class="px-1 py-2" >
+                <div class="container ">
+                        <div class="header-title w-3/4 mx-auto my-2 ">
+                        </div>
+                </div>
+        </header> -->
+        <!-- main section start -->
+        <main>
+                <!-- Salary manager scection start -->
+                <section class="sm:mx-20 sm:my-4 bg-gray-100 mx-0">
+                        <!-- salary manager title section start -->
+                        <div class="salary-manager-title py-4 ">
+                                <div class="container">
+                                        <div class="salary-title w-3/4 mx-auto my-2">
+                                                <h1 class=" text-3xl sm:text-5xl text-center font-semibold sm:font-black uppercase">Salary manager <i class="fa-solid text-green-600 fa-money-bill-1"></i></h1>
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- salary manager title section end -->
+                        <!-- salary manager main section start -->
+                        <div class="salary-manager-main">
+                                <div class="container w-full sm:w-75">
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                <!-- salary manager image section start -->
+                                                <div class="salary-manager-image mx-auto w-full py-8 px-2 sm:px-4 sm:py-16 w-11/12 sm:w-5/6">
+                                                        <img class="w-11/12 sm:w-full h-96 sm:h-full" src="./assets/images/money.jpg" alt="" srcset="">
+                                                </div>
+                                        <!-- salary manager image section end -->
+                                        <!-- salary-manager clalculation section start -->
+                                        <div class="salary-manager-calulation  w-full py-4 px-4 sm:px-4 sm:py-4 sm:mt-16 w-full sm:mb-16 sm:w-5/6" >
+                                                        <!-- income section start -->
+                                                        <div class="income-section">
+                                                        <!-- income title start -->
+                                                        <div class="income-title mb-4 ">
+                                                                <h2 class="text-4xl text-center sm:text-left ">Income</h2>
+                                                        </div>
+                                                        <!-- income title end -->
+                                                        <!-- income input section start -->
+                                                        <div class="income-input flex flex-col sm:flex-row text-center sm:mx-auto  flex-warp">
+                                                                <div class="title mt-2">
+                                                                        <p class="text-xl ">Income:</p>
+                                                                </div>
+                                                                <div class="income-input-field px-2 py-2">
+                                                                        <input id="income-input" class="px-2 py-1 text-center focus:bg-white" type="text" placeholder="type your amount">
+                                                                </div>
+                                                        </div>
+                                                        <div class="income-text text-center sm:text-left">
+                                                                <p class="text-2xl" id="income-text"> <span id="income-ammout"></span></p>
+                                                                <p class="text-red-200 text-2xl" id="income-invalid"></p>
+                                                        </div>
+                                                        <!-- income input section end -->
+                                                        </div>
+                                                        <!-- imcome section end -->
+                                                        <!-- expense section start -->
+                                                        <div class="expense-section">
+                                                                <div class="expense-title  mb-4 mt-8">
+                                                                        <h2 class="text-4xl text-center sm:text-left">Expenses</h2>
+                                                                </div>
+                                                                <!-- Expense title end -->
+                                                                <!-- expenses food input section start -->
+                                                                <div class="income-input flex flex-col sm:flex-row  text-center mr-auto mt-2 flex-warp">
+                                                                        <div class="title">
+                                                                                <p class="text-xl mt-2">Food:</p>
+                                                                        </div>
+                                                                        <div class="food-input-field mx-2 px-2 py-2">
+                                                                                <input id="food-input" class="px-2 py-1 text-center focus:bg-white" type="text" placeholder="type your amount">
+                                                                                <span class="text-sm text-center sm:text-left text-red-800" id="food-input-worng"></span>
+                                                                        </div>
+                                                                </div>
+                                                                <!-- expense food input section end -->
+                                                                <!-- expenses rent input section start -->
+                                                                <div class="rent-input flex text-center flex-col sm:flex-row  sm:mx-auto mt-2 flex-warp">
+                                                                        <div class="title">
+                                                                                <p class="text-xl mt-2">Rent:</p>
+                                                                        </div>
+                                                                        <div class="rent-input-field px-2 py-2 mx-2">
+                                                                                <input id="rent-input" class="px-2 py-1 text-center focus:bg-white" type="text" placeholder="type your amount">
+                                                                                <span class="text-sm text-center sm:text-left text-red-800" id="rent-input-worng"></span>
+                                                                        </div>
+                                                                </div>
+                                                                <!-- expense cloth input section end -->
+                                                                <div class="cloth-input flex text-center flex-col sm:flex-row  sm:mx-auto mt-2 flex-warp">
+                                                                        <div class="title ">
+                                                                                <p class="text-xl mt-2">Cloth:</p>
+                                                                        </div>
+                                                                        <div class="cloth-input-field mx-2 px-2 py-2">
+                                                                                <input id="cloth-input" class="px-2 py-1 text-center focus:bg-white" type="text" placeholder="type your amount">
+                                                                                <span class="text-sm text-center sm:text-left text-red-800" id="cloth-input-worng"></span>
+                                                                        
+                                                                        </div>
+                                                                </div>
+                                                                <!-- expense cloth input section end -->
+                                                                
+                                                        </div>
+                                                        <!-- expense section end -->
+                                                        <!-- calculation button start -->
+                                                        <div class="calculate-button  sm:mx-auto ml-[10rem] mt-4 sm:ml-0 sm:mt-4">
+                                                        <button id="calculate-btn"  class="bg-blue-800 px-4 py-2 sm:px-8 sm:py-4 text-white text-center sm:text-left rounded">Calculate</button>
+                                                        </div>
+                                                <!-- calculation button end -->
+                                                <!-- calculation section aftar press calculate button start -->
+                                                <!-- Total Expenses and balance section start -->
+                                                <div class="Total-Expenses-and-balance-section mt-8">
+                                                        <div class="expenses my-4">
+                                                                <h2 class="text-2xl text-center sm:text-left font-semibold">Total Expenses :<span id="expense-ammout"></span></h2>
+                                                        </div>
+                                                        <div class="balance my-4">
+                                                                <h2 class="text-2xl text-center sm:text-left font-semibold">Balance:<span id="balance-ammout"></span></h2>
+                                                        </div>
+                                                        
+                                                </div>
+                                                <!-- Total Expenses and balance section end -->
+                                                
+                                                <!-- calculation section aftar press calculate button end -->
+                                                <!-- savings button and input filed start -->
+                                                <div class="savings-button-input-field flex flex-col sm:flex-row  flex-wrap">
+                                                        <div class="save-text mt-2 ">
+                                                                <p class="text-xl text-center sm:text-left">Save:</p>
+                                                        </div>
+                                                        <div class="save-input-field mx-1  sm:px-2 sm:py-2">
+                                                                <div class="text-center sm:text-left">
+                                                                        <input id="save-input" class="sm:px-1 sm:py-1 text-center mx-auto focus:bg-white" type="text" placeholder="type your amount"><span class='save-percent mt-2 mx-2 text-2xl'>%</span>
+                                                                        <span class="text-center sm:text-left" id="save-input-error"></span>
+                                                                </div>
+
+                                                        </div>
+                                                        <div class="save-button text-center sm:text-left mx-2 mt-2">
+                                                                <button id="save-btn"  class="bg-blue-800 px-4 py-2 text-white text-center sm:text-left rounded">Save</button>
+                                                                </div>
+                                                </div>
+                                                <!-- savings button and input field end -->
+                                                
+                                                <!-- Saving Amount and remaining balance section start -->
+                                                <div class="savings-Ammount-and-remaining-balance-section mt-8">
+                                                        <div class="savings-ammount my-4">
+                                                                <h2 class="text-2xl text-center sm:text-left font-semibold">Saving Amount :<span id="savings-ammout">0</span></h2>
+                                                        </div>
+                                                        <div class="remaining-balance my-4">
+                                                                <h2 class="text-2xl text-center sm:text-left font-semibold">Remaining Balance:<span id="remaining-ammout">0</span></h2>
+                                                        </div>
+                                                </div>
+                                                <!-- Saving Amount and remaining balance section end-->
+                                                </div>
+                                                <!-- salary-manager clalculation section end -->
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- salary manager main section end -->
+                </section>
+        </main>
+        <!--  main section end -->
+        <!-- font awesome kits -->
+        <script src="https://kit.fontawesome.com/c2160a0138.js" crossorigin="anonymous"></script>
+        <!-- custom calulation js file add -->
+        <!-- <script src="./assets/js/calculation.js"></script> -->
+        <!-- update custom js flile -->
+        <script src="./assets/js/salarymanager.js"></script>
+</body>
+</html>
